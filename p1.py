@@ -7,6 +7,8 @@ from math import sqrt
 from heapq import heappush, heappop
 
 def dijkstras_shortest_path(src, dst, graph, adj):
+   if src == dst:
+      return [src]
    queue = []
    dist = {src: 0}
    parent = {src: None}
